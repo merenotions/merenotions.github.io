@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parallax Effect</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .parallax-container {
+            overflow-y: scroll;
+            height: 100%;
+        }
+
+        .parallax-image {
+            min-height: 400px; 
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .parallax-content {
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+        }
+    </style>
+</head>
+<body>
+    <div class="parallax-container">
+        <div class="parallax-image" style="background-image: url('https://drive.google.com/file/d/1t_npEJEn0s9OAcs2CPibwhNg3BvuUpLr/preview');"></div>
+        <div class="parallax-content">Our team of experts knows how to grow your business. Let us customize a strategy that exceeds your expectations.
+    </div>
+        <div class="parallax-image" style="background-image: url('https://drive.google.com/file/d/1fgrWCMGn9YHj9QX_A33hih1WMCqwBBMw/preview');"></div>
+    </div>
+    <script>
+        const images = document.querySelectorAll(".parallax-image");
+
+        window.addEventListener('scroll', function() {
+            images.forEach(image => {
+                let speed = 0.5; 
+                let offset = window.pageYOffset * speed;
+                image.style.backgroundPosition = `center ${offset}px`;
+            });
+        });
+    </script>
+</body>
+</html>
