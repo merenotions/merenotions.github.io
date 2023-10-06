@@ -4,65 +4,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Parallax Scrolling</title>
+    <title>Digital & Web 3 Marketing Agency</title>
     <style>
-        /* Shared Styles */
+        /* Global Styles */
         body, html {
             height: 100%;
             margin: 0;
             font-family: Arial, sans-serif;
-            background-color: #E0E0FF; /* Vaporwave theme color */
+            background-color: #E0E0FF;
         }
 
         .container {
-            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
             padding: 20px;
         }
 
-        .section {
-            margin-bottom: 50px;
+        h1, h2, h3 {
+            color: #9933CC; /* Vaporwave theme color */
         }
 
-        /* Title Section */
-        .title-section {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 50px;
+        p, li {
+            color: #666;
+            line-height: 1.6;
         }
 
-        .title-content {
-            flex: 2;
-            text-align: left;
-        }
-
-        .title-image {
-            flex: 1;
-            max-width: 30%;
+        a, .cta-button {
+            color: #9933CC;
+            text-decoration: none;
         }
 
         .cta-button {
             padding: 10px 20px;
-            background-color: #FFB6C1; /* Vaporwave theme color */
+            background-color: #FFB6C1;
             border: none;
             cursor: pointer;
             transition: background-color 0.3s;
         }
 
         .cta-button:hover {
-            background-color: #FF69B4; /* Vaporwave theme color */
+            background-color: #FF69B4;
         }
 
-        /* Our Services Section */
+        /* Sections */
+        .section {
+            padding: 50px 0;
+        }
+
+        /* Title Section */
+        .title-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        /* Services Section */
         .services {
             display: flex;
-            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
         }
 
-        .service-column {
+        .service {
             flex: 1;
-            text-align: center;
             position: relative;
+            text-align: center;
+            min-width: 300px; /* Responsive Design for Smaller Screens */
         }
 
         .parallax-image {
@@ -73,25 +81,29 @@
             bottom: 0;
             background-size: cover;
             background-position: center;
-            background-repeat: no-repeat;
             opacity: 0;
             transition: opacity 1s;
         }
 
-        .service-title {
-            z-index: 10;
-        }
-
-        /* Message Area */
+        /* Message Section */
         .contact-form {
             display: flex;
             flex-direction: column;
-            width: 300px;
+            width: 100%;
+            max-width: 400px;
             margin: 0 auto;
         }
 
-        /* ... other styles ... */
+        @media (max-width: 768px) {
+            /* For Mobile */
+            .title-section, .services {
+                text-align: center;
+            }
 
+            .services {
+                flex-direction: column;
+            }
+        }
     </style>
 </head>
 
@@ -100,43 +112,49 @@
 
         <!-- Title with a Call to Action -->
         <div class="title-section section">
-            <div class="title-content">
-                <h1>Welcome to Our Website</h1>
-                <button class="cta-button">Click Me!</button>
-            </div>
-            <div class="title-image">
-                <!-- Placeholder for your image -->
-                <img src="https://raw.githubusercontent.com/merenotions/merenotions/main/Paralax%20Photos/gamma-2_72f520f3.jpg" alt="Title Image" style="max-width: 100%; height: auto;">
-            </div>
+            <h1>Welcome to Our Digital & Web 3 Marketing Agency</h1>
+            <p>Revolutionizing the digital space one project at a time. Explore our wide range of services tailored for the Web 3 world.</p>
+            <a href="#contact" class="cta-button">Contact Us</a>
         </div>
 
-        <!-- Our Services Section with 3 columns -->
+        <!-- Our Services Section -->
         <div class="services section">
-            <div class="service-column">
+            <div class="service">
                 <div class="parallax-image" style="background-image: url('https://raw.githubusercontent.com/merenotions/merenotions/main/Paralax%20Photos/KfAyghy6jBJJ1c60.jpg');"></div>
-                <h2 class="service-title">Service 1</h2>
-                <p>Description for Service 1</p>
+                <h2>Web 3 Consulting</h2>
+                <p>We provide comprehensive consulting for Web 3 ventures, guiding businesses into the decentralized future.</p>
             </div>
-            <div class="service-column">
+            <div class="service">
                 <div class="parallax-image" style="background-image: url('https://raw.githubusercontent.com/merenotions/merenotions/main/Paralax%20Photos/pFfFcC_Q3eSaz3oY.jpg');"></div>
-                <h2 class="service-title">Service 2</h2>
-                <p>Description for Service 2</p>
+                <h2>Digital Marketing</h2>
+                <p>Advanced digital marketing strategies to elevate your brand in the connected era.</p>
             </div>
-            <div class="service-column">
+            <div class="service">
                 <div class="parallax-image" style="background-image: url('https://raw.githubusercontent.com/merenotions/merenotions/main/Paralax%20Photos/rUYZR2csrT66gj1z.jpg');"></div>
-                <h2 class="service-title">Service 3</h2>
-                <p>Description for Service 3</p>
+                <h2>Branding & Identity</h2>
+                <p>Strengthen your brand's identity in the digital landscape and create lasting impressions.</p>
             </div>
         </div>
 
-        <!-- Message Area -->
-        <div class="message section">
+        <!-- Additional Content: Testimonials and Partnerships -->
+        <div class="testimonials section">
+            <h2>What Our Clients Say</h2>
+            <p>"Their expertise in Web 3 is unmatched! We witnessed tremendous growth in our venture thanks to their insights."</p>
+            <p>- Client Name, Company</p>
+
+            <h3>Our Brand Partnerships</h3>
+            <p>We've partnered with some of the biggest names in the industry.</p>
+            <!-- Add logos or names of partnered brands -->
+        </div>
+
+        <!-- Contact Section -->
+        <div class="contact section" id="contact">
             <h2>Contact Us</h2>
             <div class="contact-form">
                 <input type="text" placeholder="Your Name">
                 <input type="email" placeholder="Your Email">
                 <textarea placeholder="Your Message"></textarea>
-                <button>Send Message</button>
+                <button class="cta-button">Send Message</button>
             </div>
         </div>
 
