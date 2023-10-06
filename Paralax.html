@@ -4,48 +4,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Parallax Effect</title>
+    <title>Parallax Scrolling</title>
     <style>
-        body,
-        html {
-            overlow: auto;
+        body, html {
+            height: 100%;
             margin: 0;
-            padding: 0;
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            display: flex;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .content {
+            flex: 1;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+
+        .images {
+            flex: 1;
+            overflow: hidden;
         }
 
         .parallax-image {
-            width: 100vw;
-            height: 100vh;
-            background-attachment: scroll;
+            height: 33.33vh;
+            background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            background-size: cover;
+            transition: transform 0.5s;
         }
 
-        .parallax-content {
-            padding: 1px;
-            background-color: rgba(255, 255, 255, 0.8);
+        .parallax-image:hover {
+            transform: scale(1.1);
         }
+
     </style>
 </head>
 
 <body>
-    
-    <div class="parallax-image" style="background-image: url('https://raw.githubusercontent.com/merenotions/merenotions/main/Paralax%20Photos/KfAyghy6jBJJ1c60.jpg');"></div>
-    <div class="parallax-image" style="background-image: url('https://raw.githubusercontent.com/merenotions/merenotions/main/Paralax%20Photos/pFfFcC_Q3eSaz3oY.jpg');"></div>
-    <div class="parallax-image" style="background-image: url('https://raw.githubusercontent.com/merenotions/merenotions/main/Paralax%20Photos/rUYZR2csrT66gj1z.jpg');"></div>
-   
-    <script>
-        const images = document.querySelectorAll(".parallax-image");
 
-        window.addEventListener('scroll', function() {
-            images.forEach(image => {
-                let speed = 0.5;
-                let offset = window.pageYOffset * speed;
-                image.style.backgroundPosition = `center -${offset}px`;
-            });
-        });
-    </script>
+<div class="container">
+
+    <div class="images">
+        <div class="parallax-image" style="background-image: url('https://raw.githubusercontent.com/merenotions/merenotions/main/Paralax%20Photos/KfAyghy6jBJJ1c60.jpg');"></div>
+        <div class="parallax-image" style="background-image: url('https://raw.githubusercontent.com/merenotions/merenotions/main/Paralax%20Photos/pFfFcC_Q3eSaz3oY.jpg');"></div>
+        <div class="parallax-image" style="background-image: url('https://raw.githubusercontent.com/merenotions/merenotions/main/Paralax%20Photos/rUYZR2csrT66gj1z.jpg');"></div>
+    </div>
+</div>
+
+<script>
+   
+    <div class="parallax-image fade-in" style="background-image: url('https://raw.githubusercontent.com/merenotions/merenotions/main/Paralax%20Photos/KfAyghy6jBJJ1c60.jpg');"></div>
+    <div class="parallax-image fade-in" style="background-image: url('https://raw.githubusercontent.com/merenotions/merenotions/main/Paralax%20Photos/pFfFcC_Q3eSaz3oY.jpg');"></div>
+    <div class="parallax-image fade-in" style="background-image: url('https://raw.githubusercontent.com/merenotions/merenotions/main/Paralax%20Photos/rUYZR2csrT66gj1z.jpg');"></div>
+
+</script>
+
 </body>
 
 </html>
