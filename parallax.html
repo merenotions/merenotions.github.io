@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Website Title</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #94D0FF; /* light blue */
+        }
+
+        .title-card {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px;
+            background-color: #FF61A6; /* pink */
+            color: #fff;
+        }
+
+        .title-content {
+            flex: 2;
+        }
+
+        .parallax-images {
+            flex: 1;
+            overflow: hidden;
+        }
+
+        .parallax-image {
+            height: 527px;
+            Width: 527px;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            transition: transform 0.5s;
+            animation: fadeInFromLeft 1.5s forwards;
+        }
+
+        .section {
+            padding: 20px;
+            margin-top: 20px;
+            background-color: #FFC3A0; /* peach */
+            border: 1px solid #8755FF; /* purple */
+        }
+
+        .three-columns {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .column {
+            flex: 1;
+            margin: 10px;
+        }
+
+        h2 {
+            color: #8755FF; /* purple */
+        }
+
+        .button {
+            background-color: #8755FF; /* purple */
+            color: #FFF;
+            padding: 10px 15px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .button:hover {
+            background-color: #653DCC; /* darker purple */
+        }
+
+        /* Fade-in from left for the images */
+        @keyframes fadeInFromLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- Title Section with Call to Action -->
+    <div class="title-card">
+        <div class="title-content">
+            <h1>Your Website Title</h1>
+            <p>Some brief intro or tagline here.</p>
+            <button>Call to Action</button>
+        </div>
+        <div class="parallax-images">
+            <!-- Your parallax images here -->
+            <div class="parallax-image" style="background-image: url('https://raw.githubusercontent.com/merenotions/merenotions/main/Paralax%20Photos/KfAyghy6jBJJ1c60.jpg');"></div>
+            <div class="parallax-image" style="background-image: url('https://raw.githubusercontent.com/merenotions/merenotions/main/Paralax%20Photos/pFfFcC_Q3eSaz3oY.jpg');"></div>
+            <div class="parallax-image" style="background-image: url('https://raw.githubusercontent.com/merenotions/merenotions/main/Paralax%20Photos/rUYZR2csrT66gj1z.jpg');"></div>
+        </div>
+    </div>
+
+    <!-- Our Services Section -->
+    <div class="section">
+        <h2>Our Services</h2>
+        <div class="three-columns">
+            <div class="column">
+                <h3>Program Path 1</h3>
+                <p>Description of program path 1.</p>
+            </div>
+            <div class="column">
+                <h3>Program Path 2</h3>
+                <p>Description of program path 2.</p>
+            </div>
+            <div class="column">
+                <h3>Program Path 3</h3>
+                <p>Description of program path 3.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Testimonials and Partners Section -->
+    <div class="section">
+        <h2>Testimonials & Partners</h2>
+        <p>Testimonial or partner info here. Adjust as needed.</p>
+    </div>
+
+    <!-- Contact Section -->
+    <div class="section">
+        <h2>Contact Us</h2>
+        <form action="https://docs.google.com/forms/d/e/1FAIpQLSeSuBivZFQa2xLLkp6PplyW2dcf7ktM31LDu3Hpj1yEYtra8g/formResponse" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+            
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+
+</body>
+</html>
