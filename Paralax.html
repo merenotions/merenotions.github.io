@@ -1,25 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Parallax Effect</title>
     <style>
-        body, html {
+        body,
+        html {
             margin: 0;
             padding: 0;
-            height: 100%;
-            overflow: hidden;
-        }
-
-        .parallax-container {
-            overflow-y: hidden;
-            height: 100%;
         }
 
         .parallax-image {
-            min-height: 400px; 
-            background-attachment: fixed;
+            height: 400px;
+            background-attachment: scroll;
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
@@ -31,20 +26,21 @@
         }
     </style>
 </head>
+
 <body>
-    <div class="parallax-container">
-        <div class="parallax-image" style="background-image: url('https://raw.githubusercontent.com/merenotions/merenotions/main/Paralax%20Photos/gamma-2_72f520f3.jpg');"></div>
-    </div>
+    <div class="parallax-image" style="background-image: url('https://raw.githubusercontent.com/merenotions/merenotions/main/Paralax%20Photos/gamma-2_72f520f3.jpg');"></div>
+   
     <script>
         const images = document.querySelectorAll(".parallax-image");
 
         window.addEventListener('scroll', function() {
             images.forEach(image => {
-                let speed = 0.5; 
+                let speed = 0.5;
                 let offset = window.pageYOffset * speed;
-                image.style.backgroundPosition = `center ${offset}px`;
+                image.style.backgroundPosition = `center -${offset}px`;
             });
         });
     </script>
 </body>
+
 </html>
